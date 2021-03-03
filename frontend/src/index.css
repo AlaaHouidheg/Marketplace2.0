@@ -1,0 +1,265 @@
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  height: 100vh;
+  font-size: 1.6rem;
+  font-family: "Roboto", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#root {
+  height: 100%;
+}
+/* Common Style*/
+a {
+  text-decoration: none;
+  color: inherit;
+}
+a:hover {
+  opacity: 0.9;
+}
+ul {
+  padding: 0;
+  margin: 0;
+  list-style-type: none !important;
+}
+
+li {
+  margin-top: 1rem;
+}
+
+button {
+  padding: 1rem;
+  border-radius: 0.5rem;
+  border: 0.1rem solid #a4a4a4;
+  outline: none;
+  font-family: Arial, Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  cursor: pointer;
+}
+button:hover {
+  border: 0.1rem solid #404040;
+  background-color: #bd9422;
+}
+button.primary {
+  background-color: #f0c040;
+}
+button.block {
+  width: 100%;
+}
+header a {
+  color: rgb(88, 88, 88);
+  padding: 1rem;
+}
+a.logo {
+  font-size: 3rem;
+  font-weight: bold;
+  color: rgb(28, 8, 75);
+}
+h1 {
+  font-size: 1.8rem;
+  padding: 1rem 0;
+}
+h2 {
+  font-size: 1.5rem;
+  padding: 1rem 0;
+}
+h5 {
+  color: #19191d;
+}
+/*the Layout*/
+.grid-container {
+  display: grid;
+  grid-template-areas:
+    "header"
+    "main"
+    "footer";
+  grid-template-columns: 1fr;
+  grid-template-rows: 5rem 1fr 5rem;
+  height: 100%;
+}
+header {
+  grid-area: header;
+  z-index: 99999;
+  width: 100%;
+  height: 6rem;
+  background-color: #ffffff;
+  border-bottom: 1px solid rgb(233, 233, 233);
+  position: fixed;
+  box-shadow: 0px 1px 2px rgba(145, 145, 167, 0.164),
+    0px 2px 4px rgba(168, 170, 187, 0.164);
+}
+.searchbox {
+  width: 30rem;
+  background-color: #ededf0;
+  padding: 1rem;
+  border-radius: 30px;
+}
+.searchbox i {
+  color: #aaaaaa;
+  margin-right: 10px;
+}
+.searchbox input {
+  background-color: transparent;
+  border: none;
+  outline: none;
+}
+main {
+  grid-area: main;
+}
+
+footer {
+  grid-area: footer;
+  background-color: #111111;
+  border-top: 2px solid red;
+  color: white;
+}
+.badge {
+  background-color: #f02020;
+  color: #ffffff;
+  border-radius: 50%;
+  padding: 0.2rem 0.7rem;
+  font-size: 1.4rem;
+  margin-left: 0.2rem;
+}
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+.row.center {
+  justify-content: center;
+}
+.row.top {
+  align-items: flex-start;
+}
+.col-1 {
+  flex: 5 1 25rem;
+  padding: 1.5rem;
+}
+.img-holder-col {
+  display: flex;
+
+  justify-content: flex-end;
+  align-items: center;
+}
+.col-2 {
+  flex: 2 1 50rem;
+  padding: 1.5rem;
+}
+/*image*/
+img {
+  border-radius: 0.5rem;
+}
+.img-holder {
+  width: 400px;
+}
+img.large {
+  width: 100%;
+  height: 100%;
+}
+
+/* card */
+.card {
+  background-color: white;
+  margin: 1rem;
+  transition-duration: 0.2s;
+}
+.card:hover {
+  box-shadow: 0px 2px 4px rgba(59, 69, 123, 0.2),
+    0px 4px 8px rgba(92, 107, 192, 0.2);
+  border-radius: 8px;
+}
+
+.card-body {
+  padding: 1rem;
+}
+
+.card-body > * {
+  margin-bottom: 0.5rem;
+  background-color: white;
+}
+.price {
+  font-size: 2rem;
+}
+/* RAting*/
+.rating span {
+  color: #f5c21d;
+  margin: 0.1rem;
+}
+
+.rating span:last-child {
+  color: #3e3e3e;
+}
+
+/*Alert*/
+.success {
+  color: #20a020;
+}
+.danger {
+  color: #a02020;
+}
+
+.alert {
+  padding: 1rem;
+  border: 0.1rem solid transparent;
+  border: 0.5rem;
+}
+.alert-info {
+  color: #2020a0;
+  background-color: #e0e0ff;
+}
+
+.alert-danger {
+  margin-top: 1.5em;
+  padding: 1.2rem;
+  color: #a02020;
+  background-color: #ffe0e0e0;
+}
+
+.spinner {
+  width: 100% !important;
+  height: 100% !important;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.178);
+}
+.slider {
+  width: 100%;
+  height: 320px;
+  background-color: #112176;
+}
+.right-nav a {
+  color: #2264d1;
+  border: 1px solid #2264d1;
+  margin-right: 3rem;
+  padding: 3px 10px 3px 10px;
+
+  border-radius: 3px;
+}
+
+.fa-arrow-left {
+  margin: 20px 0 0 10px;
+  color: #2264d1;
+  font-size: 2rem;
+}
+.fa-arrow-left:hover {
+  color: #5b89d4;
+}
+
+/*cart section*/
+.min-30 {
+  min-width: 30rem;
+}
+img.small {
+  max-width: 5rem;
+  width: 100%;
+}
